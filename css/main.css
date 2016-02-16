@@ -1,0 +1,270 @@
+/*
+  ========================================
+  Main
+  ========================================
+*/
+
+body{
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+h1{
+  color: #ccc;
+  font-weight: 300;
+}
+
+figure{
+  margin: auto;
+}
+
+.content{
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 400px;
+  overflow: hidden;
+}
+
+.content article{
+  padding: 50px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+.nothing{
+  height: 2000px;
+}
+
+/*
+  ========================================
+  Parallax
+  ========================================
+*/
+
+.edyta-box{
+  position: relative;
+  height: 480px;
+  background: white;
+  background-image: url("../img/fuji01.jpg");
+  background-size: auto 600px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.logo{
+  height: 100px;
+  width: 100%;
+  background-image: url("../img/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+}
+
+.forenyan{
+  width: 960px;
+  height: 740px;
+  background-image: url("../img/nyan.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+  top: 250px;
+}
+
+.bpusheen{
+  width: 960px;
+  height: 130px;
+  background-image: url("../img/pusheen.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: absolute;
+  left: 50%;
+  margin-left: -350px;
+  top: 60px;
+}
+
+/*
+  ========================================
+  Fotos
+  ========================================
+*/
+
+.fotos{
+  margin-bottom: 50px;
+}
+
+.fotos figure{
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+figure.is-showing{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+figure{
+  overflow: hidden;
+}
+
+figcaption{
+  position: absolute;
+  bottom: 10px;
+  left: -100%;
+  background-color: black;
+  color: white;
+  padding: 2px 8px;
+  font-size: 11px;
+  transition: all 0.3s ease-in-out;
+}
+
+figure:hover figcaption{
+  left: 0%;
+}
+
+.fotos img{
+  display: block;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+figure:hover img{
+  transform: scale(1.1);
+}
+
+/*
+  ========================================
+  Large window
+  ========================================
+*/
+
+.large-window{
+  height: 640px;
+  background-image: url(../img/et.jpg);
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  border-radius: 50%;
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.window-tint{
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-text{
+  color: white;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.promo-text strong{
+  display: block;
+  font-size: 30px;
+}
+
+.window-cta{
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.window-cta:hover{
+  background: white;
+  color: black;
+}
+
+/*
+  ========================================
+  Posts
+  ========================================
+*/
+
+.blog-posts{
+  margin-top: 100px;
+  margin-bottom: -20px;
+}
+
+.post{
+  border: 1px solid #e1e1e1;
+  padding: 20px 20px 0px;
+  background: white;
+  position: relative;
+}
+
+.post-1{
+  transform: translate(100px, 200px);
+}
+
+.post-2{
+  z-index: 2;
+}
+
+.post-3{
+  transform: translate(-100px, 200px);
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+footer{
+  background: black;
+  color: white;
+  padding: 40px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-stuff{
+  max-width: 640px;
+  margin: 0 auto;
+}
